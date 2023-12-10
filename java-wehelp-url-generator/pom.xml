@@ -7,8 +7,10 @@
   <groupId>com.ryuuzakixp.wehelp.url</groupId>
   <artifactId>url-generator</artifactId>
   <version>1.0.0</version>
+  <packaging>jar</packaging>
 
   <name>java-wehelp-url-generator</name>
+  <description>Generate valid url for surveys on Wehelp.</description>
   <url>https://github.com/ryuuzakixp/java-wehelp-url-generator</url>
 
   <properties>
@@ -46,8 +48,33 @@
     </dependency>
   </dependencies>
 
+  <developers>
+    <developer>
+      <name>Daniel Zamora</name>
+      <email>daniel.e.zamoras@gmail.com</email>
+      <organization>DzCode</organization>
+      <organizationUrl>https://github.com/ryuuzakixp</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:ryuuzakixp/java-wehelp-url-generator.git</connection>
+    <developerConnection>scm:git:git@github.com:ryuuzakixp/java-wehelp-url-generator.git</developerConnection>
+    <url>git@github.com:ryuuzakixp/java-wehelp-url-generator.git</url>
+  </scm>
+
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.1.2</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <tokenEnabled>true</tokenEnabled>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.1.0</version>
