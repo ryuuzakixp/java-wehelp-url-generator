@@ -1,4 +1,4 @@
-package com.ryuuzakixp.java.wehelp.url.generator;
+package io.github.ryuuzakixp.java.wehelp.url.generator;
 
 import java.util.Arrays;
 import java.util.Base64;
@@ -10,6 +10,12 @@ import org.apache.commons.codec.digest.HmacAlgorithms;
 import org.apache.commons.codec.digest.HmacUtils;
 import org.json.JSONObject;
 
+/**
+ * <p>SurveyLink class.</p>
+ *
+ * @author dzcode
+ * @version $Id: $Id
+ */
 public class SurveyLink {
 
     private static final String BASE_URL = "https://app.wehelpsoftware.com/survey_persons/link";
@@ -35,6 +41,14 @@ public class SurveyLink {
         this.queryParams = "?access_token=" + accessToken;
     }
 
+    /**
+     * <p>generate.</p>
+     *
+     * @param data a {@link java.util.Map} object.
+     * @param encryptKey a {@link java.lang.String} object.
+     * @return a {@link java.lang.String} object.
+     * @throws RequiredFieldException if any.
+     */
     public static String generate(Map<String, Object> data, String encryptKey) throws RequiredFieldException {
         SurveyLink instance = new SurveyLink(data, encryptKey);
         return instance.getUrl();

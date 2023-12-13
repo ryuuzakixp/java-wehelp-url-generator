@@ -1,4 +1,4 @@
-package com.ryuuzakixp.java.wehelp.url.generator;
+package io.github.ryuuzakixp.java.wehelp.url.generator;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
