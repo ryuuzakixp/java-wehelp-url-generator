@@ -60,7 +60,7 @@
   <scm>
     <connection>scm:git:git@github.com:ryuuzakixp/java-wehelp-url-generator.git</connection>
     <developerConnection>scm:git:git@github.com:ryuuzakixp/java-wehelp-url-generator.git</developerConnection>
-    <url>git@github.com:ryuuzakixp/java-wehelp-url-generator.git</url>
+    <url>https://github.com/ryuuzakixp/java-wehelp-url-generator/tree/main</url>
   </scm>
 
   <distributionManagement>
@@ -77,13 +77,14 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.sonatype.central</groupId>
-        <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.1.2</version>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.7</version>
         <extensions>true</extensions>
         <configuration>
-          <publishingServerId>central</publishingServerId>
-          <tokenEnabled>true</tokenEnabled>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
       <plugin>
