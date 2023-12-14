@@ -5,7 +5,7 @@ Function to help generate valid url for surveys on Wehelp.
 ## How to use
 The distribution is hosted on mavenCentral. To use the client, you can add the mavenCentral repository to your dependencies.
 
-Maven
+## Maven
 You can include as dependency add the project declaration to your pom.xml:
 
 ```xml
