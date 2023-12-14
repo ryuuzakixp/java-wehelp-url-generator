@@ -69,7 +69,8 @@ customFields.put("3", "xxx");
 data.put("cf", customFields);
 
 String encryptKey = "xxxx";
-String url = SurveyLink.generate(data, encryptKey);//https://app.wehelpsoftware.com/survey_persons/link?access_token=xxx...
+String url = SurveyLink.generate(data, encryptKey);
+//https://app.wehelpsoftware.com/survey_persons/link?access_token=xxx...
 
 ```
 
