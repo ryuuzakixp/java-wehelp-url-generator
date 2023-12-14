@@ -30,7 +30,7 @@ data.put("company_unit_code", "xxxx");
 Map<String, String> person = new HashMap<>();
 person.put("name", "xxxx");
 person.put("internal_code", "xxxx");
-person.put("type", "CUSTOMER");//CUSTOMER|COLLABORATOR
+person.put("type", "CUSTOMER");//CUSTOMER,COLLABORATOR
 person.put("company_unit_code", "xxx");
 
 data.put("person", person);
@@ -61,15 +61,15 @@ person.put("phone", "xxx");
 
 data.put("person", person);
 
-Map<Integer, String> customFields = new HashMap<>();
-customFields.put(1, "xxx");
-customFields.put(2, "xxx");
-customFields.put(3, "xxx");
+Map<String, String> customFields = new HashMap<>();
+customFields.put("1", "xxx");//id:value
+customFields.put("2", "xxx");
+customFields.put("3", "xxx");
 
 data.put("cf", customFields);
 
 String encryptKey = "xxxx";
-String url = SurveyLink.generate(data, encryptKey);
+String url = SurveyLink.generate(data, encryptKey);//https://app.wehelpsoftware.com/survey_persons/link?access_token=xxx...
 
 ```
 
