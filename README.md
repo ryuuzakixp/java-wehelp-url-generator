@@ -6,7 +6,7 @@ Function to help generate valid url for surveys on Wehelp.
 
 You can include as dependency:
 
-```
+```xml
 <dependency>
     <groupId>io.github.ryuuzakixp.wehelp.url</groupId>
     <artifactId>generator</artifactId>
@@ -18,7 +18,7 @@ You can include as dependency:
 
 Example minimum data required
 
-```
+```java
 Map<String, Object> data = new HashMap<>();
 data.put("code", "xxxx");
 data.put("experience_id", "xxxx");
@@ -38,7 +38,8 @@ String url = SurveyLink.generate(data, encryptKey);
 
 ```
 Example full data
-```
+
+```java
 Map<String, Object> data = new HashMap<>();
 data.put("code", "xxxx");
 data.put("experience_id", "xxxx");
